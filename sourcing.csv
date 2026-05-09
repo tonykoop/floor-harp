@@ -1,0 +1,6 @@
+item,required_spec,search_terms,supplier_candidates,date_checked,unit_price_usd,lead_time,substitution_risk,notes
+Harp strings,"22-string set or individual gauges with tension data","lever harp strings nylon wound bass tension chart","harp string suppliers",TBD,TBD,TBD,High,"Gauge and tension data are mandatory"
+Tuning pins,"22 pins suitable for harp load and selected wood","harp tuning pins zither pins","harp hardware suppliers; luthier suppliers",TBD,TBD,TBD,Medium,"Holding torque depends on pilot hole"
+Bridge pins,"22 string guide pins or eyelets","harp bridge pins eyelets","harp hardware suppliers",TBD,TBD,TBD,Medium,"Must avoid string wear"
+Hardwood laminations,"clear hardwood for neck/pillar","hard maple harp neck blank laminated hardwood","hardwood dealer; luthier supplier",TBD,TBD,TBD,Medium,"Long clear stock may be limited"
+Soundboard stock,"stable panel for harp soundboard","harp soundboard spruce birch plywood","luthier suppliers; specialty plywood suppliers",TBD,TBD,TBD,Medium,"Deflection properties matter"
