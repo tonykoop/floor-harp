@@ -1,0 +1,334 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Floor Harp Build Packet</title><style>
+body { font-family: Arial, sans-serif; color: #111; line-height: 1.35; max-width: 900px; margin: 32px auto; }
+h1 { font-size: 28px; border-bottom: 2px solid #222; padding-bottom: 6px; }
+h2 { font-size: 22px; margin-top: 28px; }
+h3 { font-size: 18px; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0 20px; font-size: 12px; }
+th, td { border: 1px solid #888; padding: 6px; vertical-align: top; }
+th { background: #e8eef8; }
+pre { white-space: pre-wrap; background: #f5f5f5; padding: 10px; border: 1px solid #ddd; }
+.page-break { page-break-before: always; break-before: page; }
+@media print { body { margin: 0.5in; max-width: none; } a { color: #111; } }
+</style></head><body>
+<h1>Floor Harp Build Packet Print Packet</h1>
+
+<p>Generated: 2026-05-09</p>
+<p>Packet folder: `/tmp/floor-harp-codex-gina-r2-build-packet`</p>
+
+<h2>File Map</h2>
+
+<table>
+<tr><th>File</th><th>Purpose</th></tr>
+<tr><td>`design.md`</td><td>Project intent, catalog metadata, assumptions, and validation plan.</td></tr>
+<tr><td>`bom.csv`</td><td>Starter bill of materials with part categories, quantities, drawing refs, and notes.</td></tr>
+<tr><td>`sourcing.csv`</td><td>Supplier/search tracker with specs, price/date fields, lead time, substitutes, and risks.</td></tr>
+<tr><td>`cut-list.csv`</td><td>Rough/final stock sizes, material, grain/orientation, operations, yield, and offcuts.</td></tr>
+<tr><td>`drawing-brief.md`</td><td>Manufacturing drawing and technical product sketch brief.</td></tr>
+<tr><td>`assembly-manual.md`</td><td>Shop-facing sequence, tools, fixtures, safety, tuning, finishing, and maintenance notes.</td></tr>
+<tr><td>`validation.csv`</td><td>Target/measured values, tolerance, environment, result, and tuning/build action log.</td></tr>
+<tr><td>`supplier-rfq.md`</td><td>Supplier email/request-for-quote starter.</td></tr>
+<tr><td>`visual-bom-brief.md`</td><td>Art direction for an image-forward visual BOM.</td></tr>
+<tr><td>`wolfram-starter.wl`</td><td>Wolfram starter for physics, optimization, visualization, and validation.</td></tr>
+<tr><td>`README.md`</td><td>Project artifact.</td></tr>
+<tr><td>`photo-shotlist.md`</td><td>Project artifact.</td></tr>
+<tr><td>`risks.md`</td><td>Project artifact.</td></tr>
+</table>
+
+<div class="page-break"></div>
+
+<h2>design.md</h2>
+
+<p>Project intent, catalog metadata, assumptions, and validation plan.</p>
+
+<h1>Floor Harp Design</h1>
+
+<h2>Intent</h2>
+
+<p>Create a practical L2 packet for a small floor-standing harp that is large</p>
+<p>enough to test graduated string lengths, frame stiffness, and ergonomic reach</p>
+<p>without claiming concert-harp maturity.</p>
+
+<h2>Readiness</h2>
+
+<p>L2 scaffold. This packet can support CAD layout and sourcing review, but the</p>
+<p>frame must be analyzed and proofed before a full string load is applied.</p>
+
+<h2>Governing Model</h2>
+
+<p>Strings use Mersenne-Taylor:</p>
+
+<pre><code>
+f = (1 / (2 L)) * sqrt(T / mu)
+</code></pre>
+
+<p>The harp also needs a structural load model because cumulative string tension</p>
+<p>dominates the neck, pillar, soundboard, and base joints.</p>
+
+<h2>Baseline Assumptions</h2>
+
+<table>
+<tr><th>Parameter</th><th>Baseline</th><th>Notes</th></tr>
+<tr><td>String count</td><td>22</td><td>C3 through C6 diatonic first pass</td></tr>
+<tr><td>Scale lengths</td><td>42 in bass to 13 in treble</td><td>Graduated after gauge selection</td></tr>
+<tr><td>String materials</td><td>Nylon/fluorocarbon treble, wound bass as needed</td><td>Supplier tension data required</td></tr>
+<tr><td>Frame</td><td>Hardwood neck, pillar, base</td><td>Lamination or reinforced joinery likely</td></tr>
+<tr><td>Soundboard</td><td>Spruce/ply soundboard with ribs</td><td>Thickness and rib pattern TBD</td></tr>
+<tr><td>Target total tension</td><td>300-600 lbf first-pass range</td><td>Must be refined before build</td></tr>
+</table>
+
+<h2>Tension Safety Notes</h2>
+
+<ul>
+<li>Do not bring a prototype to full pitch until neck, pillar, and base joints</li>
+</ul>
+<p>  have passed dry-load review.</p>
+<ul>
+<li>String from low to high in stages while checking frame movement.</li>
+<li>Keep the body out of the string plane during initial pitch-up.</li>
+<li>Add a proof-load hold point before final tuning.</li>
+</ul>
+
+<h2>Known Gaps</h2>
+
+<ul>
+<li>No final string chart or lever/sharping plan.</li>
+<li>No frame FEA or physical proof-load result.</li>
+<li>No soundboard deflection data.</li>
+<li>No sourceability/pricing check.</li>
+<li>No prototype tuning record.</li>
+</ul>
+
+<div class="page-break"></div>
+
+<h2>bom.csv</h2>
+
+<p>Starter bill of materials with part categories, quantities, drawing refs, and notes.</p>
+
+<table>
+<tr><th>item</th><th>qty</th><th>unit</th><th>material_or_spec</th><th>estimated_cost_usd</th><th>notes</th></tr>
+<tr><td>Neck blank or lamination set</td><td>1</td><td>set</td><td>hard maple, walnut, or laminated hardwood</td><td>120</td><td>Primary loaded member</td></tr>
+<tr><td>Pillar blank or lamination set</td><td>1</td><td>set</td><td>hardwood, straight grain or laminated</td><td>80</td><td>Avoid short grain at joints</td></tr>
+<tr><td>Base block/feet</td><td>1</td><td>set</td><td>hardwood or plywood core with hardwood caps</td><td>55</td><td>Must resist tipping and string load</td></tr>
+<tr><td>Soundboard panel</td><td>1</td><td>ea</td><td>spruce, cedar, or birch ply, thickness TBD</td><td>70</td><td>Ribbing pattern TBD</td></tr>
+<tr><td>Back/shell stock</td><td>1</td><td>set</td><td>plywood or hardwood strips</td><td>60</td><td>Prototype shell can be simple</td></tr>
+<tr><td>Harp strings</td><td>1</td><td>set</td><td>22-string nylon/fluorocarbon/wound schedule TBD</td><td>160</td><td>Must include tension data</td></tr>
+<tr><td>Tuning pins</td><td>22</td><td>ea</td><td>harp or zither pins sized for frame</td><td>45</td><td>Pilot holes must be tested</td></tr>
+<tr><td>Bridge pins/eyelets</td><td>22</td><td>ea</td><td>harp bridge pins or suitable string guides</td><td>35</td><td>Spacing and angle TBD</td></tr>
+<tr><td>Adhesive/finish</td><td>1</td><td>lot</td><td>structural wood glue and clear finish</td><td>35</td><td>Use fresh adhesive</td></tr>
+</table>
+
+<div class="page-break"></div>
+
+<h2>sourcing.csv</h2>
+
+<p>Supplier/search tracker with specs, price/date fields, lead time, substitutes, and risks.</p>
+
+<table>
+<tr><th>item</th><th>required_spec</th><th>search_terms</th><th>supplier_candidates</th><th>date_checked</th><th>unit_price_usd</th><th>lead_time</th><th>substitution_risk</th><th>notes</th></tr>
+<tr><td>Harp strings</td><td>22-string set or individual gauges with tension data</td><td>lever harp strings nylon wound bass tension chart</td><td>harp string suppliers</td><td>TBD</td><td>TBD</td><td>TBD</td><td>High</td><td>Gauge and tension data are mandatory</td></tr>
+<tr><td>Tuning pins</td><td>22 pins suitable for harp load and selected wood</td><td>harp tuning pins zither pins</td><td>harp hardware suppliers; luthier suppliers</td><td>TBD</td><td>TBD</td><td>TBD</td><td>Medium</td><td>Holding torque depends on pilot hole</td></tr>
+<tr><td>Bridge pins</td><td>22 string guide pins or eyelets</td><td>harp bridge pins eyelets</td><td>harp hardware suppliers</td><td>TBD</td><td>TBD</td><td>TBD</td><td>Medium</td><td>Must avoid string wear</td></tr>
+<tr><td>Hardwood laminations</td><td>clear hardwood for neck/pillar</td><td>hard maple harp neck blank laminated hardwood</td><td>hardwood dealer; luthier supplier</td><td>TBD</td><td>TBD</td><td>TBD</td><td>Medium</td><td>Long clear stock may be limited</td></tr>
+<tr><td>Soundboard stock</td><td>stable panel for harp soundboard</td><td>harp soundboard spruce birch plywood</td><td>luthier suppliers; specialty plywood suppliers</td><td>TBD</td><td>TBD</td><td>TBD</td><td>Medium</td><td>Deflection properties matter</td></tr>
+</table>
+
+<div class="page-break"></div>
+
+<h2>cut-list.csv</h2>
+
+<p>Rough/final stock sizes, material, grain/orientation, operations, yield, and offcuts.</p>
+
+<table>
+<tr><th>part</th><th>qty</th><th>rough_dimensions_in</th><th>final_dimensions_in</th><th>material</th><th>grain_or_orientation</th><th>operation</th><th>notes</th><th></th></tr>
+<tr><td>Neck</td><td>1</td><td>2.0 x 5.0 x 42.0</td><td>profile TBD</td><td>hardwood/lamination</td><td>continuous along string load</td><td>template, bandsaw/CNC, drill pins</td><td>Do not final drill before string layout</td><td></td></tr>
+<tr><td>Pillar</td><td>1</td><td>2.0 x 3.0 x 48.0</td><td>profile TBD</td><td>hardwood/lamination</td><td>continuous lengthwise</td><td>shape and fit joints</td><td>Joint geometry is critical</td><td></td></tr>
+<tr><td>Base</td><td>1</td><td>2.0 x 8.0 x 20.0</td><td>profile TBD</td><td>hardwood/ply core</td><td>grain lengthwise</td><td>shape, join, add feet</td><td>Check tip stability</td><td></td></tr>
+<tr><td>Soundboard</td><td>1</td><td>0.160 x 14.0 x 36.0</td><td>taper/profile TBD</td><td>spruce/cedar/ply</td><td>long grain vertical</td><td>cut, brace, drill string holes</td><td>Deflection target TBD</td><td></td></tr>
+<tr><td>Back/shell</td><td>1</td><td>set</td><td>TBD</td><td>TBD</td><td>ply/hardwood</td><td>stable</td><td>cut and assemble</td><td>Can be simplified for prototype</td></tr>
+<tr><td>Bridge strip</td><td>1</td><td>0.5 x 1.0 x 34.0</td><td>profile TBD</td><td>hardwood</td><td>long grain</td><td>shape and drill</td><td>Pin angle TBD</td><td></td></tr>
+</table>
+
+<div class="page-break"></div>
+
+<h2>drawing-brief.md</h2>
+
+<p>Manufacturing drawing and technical product sketch brief.</p>
+
+<h1>Floor Harp Drawing Brief</h1>
+
+<p>Required first drawings:</p>
+
+<ul>
+<li>Full-size side elevation with neck, pillar, base, soundboard, and string fan.</li>
+<li>String chart with note, frequency, scale length, gauge, and target tension.</li>
+<li>Neck drilling layout with pin spacing and edge distances.</li>
+<li>Pillar/base joint detail.</li>
+<li>Soundboard section with bridge strip, string angle, and rib layout.</li>
+</ul>
+
+<div class="page-break"></div>
+
+<h2>assembly-manual.md</h2>
+
+<p>Shop-facing sequence, tools, fixtures, safety, tuning, finishing, and maintenance notes.</p>
+
+<h1>Floor Harp Assembly Manual</h1>
+
+<p>1. Lock the string chart and full-size side elevation before cutting.</p>
+<p>2. Build neck and pillar from clear stock or laminations with conservative</p>
+<p>   glue area.</p>
+<p>3. Dry-fit neck, pillar, and base, then mark string paths and pin locations.</p>
+<p>4. Build the soundbox/soundboard assembly and verify flatness.</p>
+<p>5. Fit bridge strip, guide pins, and string holes without sharp edges.</p>
+<p>6. Test tuning pin pilot holes in offcuts before drilling the neck.</p>
+<p>7. Assemble frame and soundbox, then finish before final hardware if practical.</p>
+<p>8. String gradually in stages, recording frame movement after each stage.</p>
+
+<p>Safety: treat the first full string-up as a proof test. Wear eye protection and</p>
+<p>stand out of the string plane.</p>
+
+<div class="page-break"></div>
+
+<h2>validation.csv</h2>
+
+<p>Target/measured values, tolerance, environment, result, and tuning/build action log.</p>
+
+<table>
+<tr><th>check_id</th><th>area</th><th>target</th><th>method</th><th>tolerance</th><th>measured</th><th>result</th><th>action</th></tr>
+<tr><td>VAL-001</td><td>String schedule</td><td>C3-C6 diatonic target frequencies</td><td>calculate and tuner check</td><td>+/- 10 cents after settle</td><td>TBD</td><td>TBD</td><td>Adjust gauge or scale</td></tr>
+<tr><td>VAL-002</td><td>String safety</td><td>all strings within supplier tension range</td><td>supplier data and calculation</td><td>within published range</td><td>TBD</td><td>TBD</td><td>Change string set</td></tr>
+<tr><td>VAL-003</td><td>Frame load</td><td>no permanent frame movement at staged tension</td><td>measure neck/pillar before and after pitch-up</td><td>&lt;=0.060 in first pass</td><td>TBD</td><td>TBD</td><td>Increase section or reinforce joints</td></tr>
+<tr><td>VAL-004</td><td>Tuning pin hold</td><td>pins hold pitch over 24 hours</td><td>mark pin angle and log tuning drift</td><td>&lt;=8 cents drift</td><td>TBD</td><td>TBD</td><td>Revise pilot holes/hardware</td></tr>
+<tr><td>VAL-005</td><td>Tip stability</td><td>instrument stable in playing position</td><td>push/lean test with conservative force</td><td>no tip tendency</td><td>TBD</td><td>TBD</td><td>Revise base/feet</td></tr>
+<tr><td>VAL-006</td><td>Ergonomics</td><td>player can reach full string range</td><td>mockup photos and reach notes</td><td>comfortable reach</td><td>TBD</td><td>TBD</td><td>Revise height/string fan</td></tr>
+</table>
+
+<div class="page-break"></div>
+
+<h2>supplier-rfq.md</h2>
+
+<p>Supplier email/request-for-quote starter.</p>
+
+<h1>Supplier RFQ Draft</h1>
+
+<p>Hello,</p>
+
+<p>Please quote hardware and strings for a 22-string small floor-harp prototype</p>
+<p>covering approximately C3 through C6. I need individual string gauges with</p>
+<p>tension data, compatible tuning pins, and bridge pins or eyelets.</p>
+
+<p>Please include material specifications, rated tension or breaking strength,</p>
+<p>unit price, minimum order quantity, lead time, and shipping options.</p>
+
+<div class="page-break"></div>
+
+<h2>visual-bom-brief.md</h2>
+
+<p>Art direction for an image-forward visual BOM.</p>
+
+<h1>Visual BOM Brief</h1>
+
+<p>Show the full harp silhouette with callouts for neck, pillar, base, soundboard,</p>
+<p>back/shell, bridge strip, tuning pins, guide pins, string set, adhesive, and</p>
+<p>finish. Include a detail inset for the string path through pin, guide, bridge,</p>
+<p>and soundboard.</p>
+
+<div class="page-break"></div>
+
+<h2>wolfram-starter.wl</h2>
+
+<p>Wolfram starter for physics, optimization, visualization, and validation.</p>
+
+<pre><code>
+(* Floor harp string schedule starter. Values are first-pass assumptions. *)
+ClearAll[&quot;Global`*&quot;];
+a4 = 440;
+freqFromMidi[m_] := a4*2^((m - 69)/12);
+notes = Range[48, 84]; (* C3 through C6 chromatic range; select diatonic rows later *)
+scaleLengthIn[m_] := 13 + (42 - 13)*(84 - m)/(84 - 48);
+
+Dataset[
+  Table[
+    &lt;|&quot;midi&quot; -&gt; m, &quot;frequencyHz&quot; -&gt; N[freqFromMidi[m]],
+      &quot;firstPassScaleLengthIn&quot; -&gt; N[scaleLengthIn[m]]|&gt;,
+    {m, notes}
+  ]
+]
+</code></pre>
+
+<div class="page-break"></div>
+
+<h2>README.md</h2>
+
+<p>Project artifact.</p>
+
+<h1>Floor Harp</h1>
+
+<p>Engineering documentation and parametric design table for a floor-standing concert-style harp.</p>
+
+<p>Part of the [tonykoop/instrument-maker](https://github.com/tonykoop/instrument-maker) catalogue.</p>
+
+<h2>Readiness</h2>
+
+<p>L2 scaffold. This repo now contains root-mode build packet documentation for a</p>
+<p>small floor-harp prototype. It is not L3 because string schedule validation,</p>
+<p>frame-load analysis, CAD renders, sourceability checks, and measured prototype</p>
+<p>data are still open.</p>
+
+<h2>Packet Contents</h2>
+
+<ul>
+<li>`design.md` - design basis, string schedule assumptions, and structural gaps.</li>
+<li>`bom.csv`, `sourcing.csv`, `cut-list.csv`, `validation.csv` - packet tables.</li>
+<li>`assembly-manual.md`, `risks.md`, `photo-shotlist.md` - build and review aids.</li>
+<li>`drawing-brief.md`, `drawings/README.md`, `cad/README.md`,</li>
+</ul>
+<p>  `wolfram-starter.wl`, `wolfram/README.md` - starter technical artifacts.</p>
+
+<h2>String-Scale Assumptions</h2>
+
+<p>Baseline: 22 strings from C3 to C6 diatonic, graduated speaking lengths from</p>
+<p>about 42 in bass to 13 in treble, nylon/fluorocarbon/wound bass strings as</p>
+<p>needed, and a frame designed conservatively before any full-tension string-up.</p>
+
+<h2>License</h2>
+
+<p>[CC BY 4.0](LICENSE) - see LICENSE for details.</p>
+
+<div class="page-break"></div>
+
+<h2>photo-shotlist.md</h2>
+
+<p>Project artifact.</p>
+
+<h1>Photo Shotlist</h1>
+
+<ul>
+<li>Full-size side elevation with string fan and frame members.</li>
+<li>Neck and pillar grain or lamination layout before cutting.</li>
+<li>Dry-fit frame joints before glue.</li>
+<li>Tuning pin scrap test with bit sizes labeled.</li>
+<li>Soundboard bridge/string-hole detail before stringing.</li>
+<li>Staged string-up with frame movement measurements.</li>
+</ul>
+
+<div class="page-break"></div>
+
+<h2>risks.md</h2>
+
+<p>Project artifact.</p>
+
+<h1>Floor Harp Risks</h1>
+
+<ul>
+<li>Cumulative string tension can damage the frame or injure the builder if the</li>
+</ul>
+<p>  neck, pillar, or base joint fails.</p>
+<ul>
+<li>Tuning pin torque and holding power are unknown until scrap tests are done.</li>
+<li>Soundboard deflection is not validated.</li>
+<li>Long clear hardwood and harp strings may have cost/lead-time surprises.</li>
+<li>Remain at L2 until structural review, sourceability, and prototype tuning</li>
+</ul>
+<p>  evidence are available.</p>
+</body></html>

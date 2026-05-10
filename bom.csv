@@ -1,0 +1,10 @@
+item,qty,unit,material_or_spec,estimated_cost_usd,notes
+Neck blank or lamination set,1,set,"hard maple, walnut, or laminated hardwood",120,"Primary loaded member"
+Pillar blank or lamination set,1,set,"hardwood, straight grain or laminated",80,"Avoid short grain at joints"
+Base block/feet,1,set,"hardwood or plywood core with hardwood caps",55,"Must resist tipping and string load"
+Soundboard panel,1,ea,"spruce, cedar, or birch ply, thickness TBD",70,"Ribbing pattern TBD"
+Back/shell stock,1,set,"plywood or hardwood strips",60,"Prototype shell can be simple"
+Harp strings,1,set,"22-string nylon/fluorocarbon/wound schedule TBD",160,"Must include tension data"
+Tuning pins,22,ea,"harp or zither pins sized for frame",45,"Pilot holes must be tested"
+Bridge pins/eyelets,22,ea,"harp bridge pins or suitable string guides",35,"Spacing and angle TBD"
+Adhesive/finish,1,lot,"structural wood glue and clear finish",35,"Use fresh adhesive"

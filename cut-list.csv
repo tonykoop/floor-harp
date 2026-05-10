@@ -1,0 +1,7 @@
+part,qty,rough_dimensions_in,final_dimensions_in,material,grain_or_orientation,operation,notes
+Neck,1,"2.0 x 5.0 x 42.0","profile TBD","hardwood/lamination","continuous along string load","template, bandsaw/CNC, drill pins","Do not final drill before string layout"
+Pillar,1,"2.0 x 3.0 x 48.0","profile TBD","hardwood/lamination","continuous lengthwise","shape and fit joints","Joint geometry is critical"
+Base,1,"2.0 x 8.0 x 20.0","profile TBD","hardwood/ply core","grain lengthwise","shape, join, add feet","Check tip stability"
+Soundboard,1,"0.160 x 14.0 x 36.0","taper/profile TBD","spruce/cedar/ply","long grain vertical","cut, brace, drill string holes","Deflection target TBD"
+Back/shell,1,set,"TBD","TBD","ply/hardwood","stable","cut and assemble","Can be simplified for prototype"
+Bridge strip,1,"0.5 x 1.0 x 34.0","profile TBD","hardwood","long grain","shape and drill","Pin angle TBD"
