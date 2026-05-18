@@ -13,6 +13,8 @@ data are still open.
 
 ## Packet Contents
 
+- `explorer.html` - studio-facing overview of packet evidence, readiness gates,
+  and linked design artifacts.
 - `design.md` - design basis, string schedule assumptions, and structural gaps.
 - `bom.csv`, `sourcing.csv`, `cut-list.csv`, `validation.csv` - packet tables.
 - `assembly-manual.md`, `risks.md`, `photo-shotlist.md` - build and review aids.
