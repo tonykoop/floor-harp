@@ -33,6 +33,13 @@ dominates the neck, pillar, soundboard, and base joints.
 | Soundboard | Spruce/ply soundboard with ribs | Thickness and rib pattern TBD |
 | Target total tension | 300-600 lbf first-pass range | Must be refined before build |
 
+## String Schedule Boundary
+
+`string-schedule.csv` records the current 22-note target map for CAD layout and
+supplier review. It carries target frequencies and first-pass speaking lengths
+only. Gauge, string ID, tension, supplier source, and measured pitch columns are
+intentionally left TBD until a real string set is selected and checked.
+
 ## Tension Safety Notes
 
 - Do not bring a prototype to full pitch until neck, pillar, and base joints
@@ -43,7 +50,7 @@ dominates the neck, pillar, soundboard, and base joints.
 
 ## Known Gaps
 
-- No final string chart or lever/sharping plan.
+- No source-backed string chart or lever/sharping plan.
 - No frame FEA or physical proof-load result.
 - No soundboard deflection data.
 - No sourceability/pricing check.

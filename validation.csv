@@ -1,7 +1,8 @@
 check_id,area,target,method,tolerance,measured,result,action
-VAL-001,String schedule,"C3-C6 diatonic target frequencies","calculate and tuner check","+/- 10 cents after settle",TBD,TBD,"Adjust gauge or scale"
-VAL-002,String safety,"all strings within supplier tension range","supplier data and calculation","within published range",TBD,TBD,"Change string set"
+VAL-001,String schedule,"22 C3-C6 diatonic target rows in string-schedule.csv","CSV row check and tuner check after string-up","+/- 10 cents after settle",TBD,TBD,"Adjust gauge or scale"
+VAL-002,String safety,"all strings within supplier tension range","supplier data and Mersenne-Taylor calculation","within published range",TBD,TBD,"Change string set"
 VAL-003,Frame load,"no permanent frame movement at staged tension","measure neck/pillar before and after pitch-up","<=0.060 in first pass",TBD,TBD,"Increase section or reinforce joints"
 VAL-004,Tuning pin hold,"pins hold pitch over 24 hours","mark pin angle and log tuning drift","<=8 cents drift",TBD,TBD,"Revise pilot holes/hardware"
 VAL-005,Tip stability,"instrument stable in playing position","push/lean test with conservative force","no tip tendency",TBD,TBD,"Revise base/feet"
 VAL-006,Ergonomics,"player can reach full string range","mockup photos and reach notes","comfortable reach",TBD,TBD,"Revise height/string fan"
+VAL-007,Schedule sourceability,"each string schedule row has supplier gauge and tension evidence","supplier catalog or calculator review","no TBD gauge/tension/source fields",TBD,TBD,"Keep packet at L2 until source-backed"

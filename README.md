@@ -16,6 +16,9 @@ data are still open.
 - `explorer.html` - studio-facing overview of packet evidence, readiness gates,
   and linked design artifacts.
 - `design.md` - design basis, string schedule assumptions, and structural gaps.
+- `string-schedule.csv` - target-only 22-string C3-C6 schedule for CAD and
+  supplier review; gauge, tension, source, and measured pitch fields remain
+  open.
 - `bom.csv`, `sourcing.csv`, `cut-list.csv`, `validation.csv` - packet tables.
 - `assembly-manual.md`, `risks.md`, `photo-shotlist.md` - build and review aids.
 - `drawing-brief.md`, `drawings/README.md`, `cad/README.md`,
@@ -26,6 +29,8 @@ data are still open.
 Baseline: 22 strings from C3 to C6 diatonic, graduated speaking lengths from
 about 42 in bass to 13 in treble, nylon/fluorocarbon/wound bass strings as
 needed, and a frame designed conservatively before any full-tension string-up.
+The current `string-schedule.csv` is a target schedule only; it is not a
+source-backed gauge or tension chart.
 
 ## Build Review Checklist
 
@@ -45,7 +50,7 @@ stack and glue surfaces in the drawing set.
 This packet supports design review and prototype planning only. The following
 evidence is still required before calling it L3:
 
-- Final 22-string note/gauge/tension schedule from supplier data.
+- Source-backed 22-string note/gauge/tension schedule from supplier data.
 - Total string load estimate and structural review of neck, pillar, and base.
 - Tuning pin scrap test for pilot size, torque, and holding power.
 - Staged pitch-up log with frame movement measurements.

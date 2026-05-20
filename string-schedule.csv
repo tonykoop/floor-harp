@@ -1,0 +1,23 @@
+string_no,note,midi,target_frequency_hz,speaking_length_in,scale_basis,material_candidate,gauge_or_string_id,tension_lbf,target_tension_status,supplier_tension_source,measured_frequency_hz,cents_error,readiness_notes
+1,C3,48,130.813,42.00,first-pass linear fan,wound bass or nylon,TBD,TBD,requires supplier calculation,TBD,,,Anchor bass length only after tension data is chosen
+2,D3,50,146.832,40.39,first-pass linear fan,wound bass or nylon,TBD,TBD,requires supplier calculation,TBD,,,Confirm break percentage before drilling
+3,E3,52,164.814,38.78,first-pass linear fan,wound bass or nylon,TBD,TBD,requires supplier calculation,TBD,,,Confirm break percentage before drilling
+4,F3,53,174.614,37.97,first-pass linear fan,wound bass or nylon,TBD,TBD,requires supplier calculation,TBD,,,Confirm break percentage before drilling
+5,G3,55,195.998,36.36,first-pass linear fan,wound bass or nylon,TBD,TBD,requires supplier calculation,TBD,,,Confirm break percentage before drilling
+6,A3,57,220.000,34.75,first-pass linear fan,wound bass or nylon,TBD,TBD,requires supplier calculation,TBD,,,Confirm break percentage before drilling
+7,B3,59,246.942,33.14,first-pass linear fan,wound bass or nylon,TBD,TBD,requires supplier calculation,TBD,,,Confirm transition to plain stringing
+8,C4,60,261.626,32.33,first-pass linear fan,nylon or fluorocarbon,TBD,TBD,requires supplier calculation,TBD,,,Confirm material transition by tension
+9,D4,62,293.665,30.72,first-pass linear fan,nylon or fluorocarbon,TBD,TBD,requires supplier calculation,TBD,,,Confirm material transition by tension
+10,E4,64,329.628,29.11,first-pass linear fan,nylon or fluorocarbon,TBD,TBD,requires supplier calculation,TBD,,,Confirm material transition by tension
+11,F4,65,349.228,28.31,first-pass linear fan,nylon or fluorocarbon,TBD,TBD,requires supplier calculation,TBD,,,Confirm material transition by tension
+12,G4,67,391.995,26.69,first-pass linear fan,nylon or fluorocarbon,TBD,TBD,requires supplier calculation,TBD,,,Confirm material transition by tension
+13,A4,69,440.000,25.08,first-pass linear fan,nylon or fluorocarbon,TBD,TBD,requires supplier calculation,TBD,,,Reference pitch row
+14,B4,71,493.883,23.47,first-pass linear fan,nylon or fluorocarbon,TBD,TBD,requires supplier calculation,TBD,,,Confirm material transition by tension
+15,C5,72,523.251,22.67,first-pass linear fan,nylon or fluorocarbon,TBD,TBD,requires supplier calculation,TBD,,,Confirm material transition by tension
+16,D5,74,587.330,21.06,first-pass linear fan,nylon or fluorocarbon,TBD,TBD,requires supplier calculation,TBD,,,Confirm material transition by tension
+17,E5,76,659.255,19.44,first-pass linear fan,nylon or fluorocarbon,TBD,TBD,requires supplier calculation,TBD,,,Confirm material transition by tension
+18,F5,77,698.456,18.64,first-pass linear fan,nylon or fluorocarbon,TBD,TBD,requires supplier calculation,TBD,,,Confirm material transition by tension
+19,G5,79,783.991,17.03,first-pass linear fan,nylon or fluorocarbon,TBD,TBD,requires supplier calculation,TBD,,,Confirm material transition by tension
+20,A5,81,880.000,15.42,first-pass linear fan,nylon or fluorocarbon,TBD,TBD,requires supplier calculation,TBD,,,Confirm treble feel and break percentage
+21,B5,83,987.767,13.81,first-pass linear fan,nylon or fluorocarbon,TBD,TBD,requires supplier calculation,TBD,,,Confirm treble feel and break percentage
+22,C6,84,1046.502,13.00,first-pass linear fan,nylon or fluorocarbon,TBD,TBD,requires supplier calculation,TBD,,,Confirm highest row before setting pin spacing

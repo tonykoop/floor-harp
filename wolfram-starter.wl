@@ -2,7 +2,7 @@
 ClearAll["Global`*"];
 a4 = 440;
 freqFromMidi[m_] := a4*2^((m - 69)/12);
-notes = Range[48, 84]; (* C3 through C6 chromatic range; select diatonic rows later *)
+notes = {48, 50, 52, 53, 55, 57, 59, 60, 62, 64, 65, 67, 69, 71, 72, 74, 76, 77, 79, 81, 83, 84}; (* C3 through C6 diatonic *)
 scaleLengthIn[m_] := 13 + (42 - 13)*(84 - m)/(84 - 48);
 
 Dataset[
