@@ -15,6 +15,7 @@
   "files_included": [
     "README.md",
     "design.md",
+    "string-schedule.csv",
     "floor-harp-design-table.xlsx",
     "bom.csv",
     "sourcing.csv",
@@ -56,7 +57,7 @@
   "release_gate": {
     "public_candidate": false,
     "required_before_public": [
-      "Final 22-string note/gauge/tension schedule from supplier data.",
+      "Source-backed 22-string note/gauge/tension schedule from supplier data.",
       "Total string load estimate and structural review of neck, pillar, base, and soundboard load path.",
       "Tuning pin scrap test for pilot size, torque, and holding power.",
       "Staged pitch-up log with frame movement measurements.",
@@ -75,6 +76,7 @@
   },
   "notes": [
     "Explorer is a documentation surface and does not upgrade the packet beyond L2.",
+    "string-schedule.csv is target-only and does not provide source-backed gauge, tension, or measured pitch evidence.",
     "The design workbook is retained as legacy design-table evidence; README.md and design.md define the current 22-string prototype boundary.",
     "No measured prototype data, reviewed CAD, or sourceability check is present yet."
   ]
