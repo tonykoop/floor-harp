@@ -4,6 +4,8 @@ Engineering documentation and parametric design table for a floor-standing conce
 
 Part of the [tonykoop/instrument-maker](https://github.com/tonykoop/instrument-maker) catalogue.
 
+**Status: L2 V5 build-packet candidate**
+
 ## Readiness
 
 L2 scaffold. This repo now contains root-mode build packet documentation for a
