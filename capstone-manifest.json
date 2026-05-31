@@ -25,7 +25,7 @@
     "validation.csv",
     "supplier-rfq.md",
     "visual-bom-brief.md",
-    "wolfram-starter.wl",
+    "floor-harp-starter.wl",
     "photo-shotlist.md",
     "risks.md",
     "capstone-deck.md",
@@ -46,8 +46,8 @@
   "engineering": {
     "wolfram": [
       {
-        "source_file": "wolfram-starter.wl",
-        "cloud_path": "wolfram-starter.wl",
+        "source_file": "floor-harp-starter.wl",
+        "cloud_path": "floor-harp-starter.wl",
         "cloud_url": "",
         "kind": "local-wl",
         "permission": "local"

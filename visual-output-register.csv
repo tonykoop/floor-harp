@@ -6,5 +6,5 @@ SRC-001,sourcing.csv,sourcing,sourcing,fabrication,,derived_from_authority,true,
 CUT-001,cut-list.csv,cut_list,cut_list,fabrication,floor-harp-design-table.xlsx,derived_from_authority,true,Column, soundbox, neck, bridge-pin dimensions.
 MT-001,validation.csv,measurement_template,measurement_template,fabrication,,derived_from_authority,true,Build and performance validation gates.
 DRW-001,drawings/README.md,drawing,drawing_stub,pending_measurement,,placeholder,false,Drawing directory stub. No DXF/SVG yet.
-WL-001,wolfram-starter.wl,wolfram_source,wolfram,derived_preview,,source_only,false,Wolfram source scaffold; source-only at L2 until executed.
+WL-001,floor-harp-starter.wl,wolfram_source,wolfram,derived_preview,,source_only,false,Wolfram source scaffold; source-only at L2 until executed.
 CAD-001,cad/floor-harp-placeholder.scad,cad_source,cad_authoring,pending_measurement,floor-harp-design-table.xlsx,scaffold_dimensions,false,Parametric OpenSCAD placeholder (soundbox + column + neck). Not fabrication authority until reviewed.

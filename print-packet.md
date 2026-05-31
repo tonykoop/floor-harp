@@ -16,7 +16,7 @@ Packet folder: `/tmp/floor-harp-codex-gina-r2-build-packet`
 | `validation.csv` | Target/measured values, tolerance, environment, result, and tuning/build action log. |
 | `supplier-rfq.md` | Supplier email/request-for-quote starter. |
 | `visual-bom-brief.md` | Art direction for an image-forward visual BOM. |
-| `wolfram-starter.wl` | Wolfram starter for physics, optimization, visualization, and validation. |
+| `floor-harp-starter.wl` | Wolfram starter for physics, optimization, visualization, and validation. |
 | `README.md` | Project artifact. |
 | `photo-shotlist.md` | Project artifact. |
 | `risks.md` | Project artifact. |
@@ -209,7 +209,7 @@ and soundboard.
 
 <div class="page-break"></div>
 
-## wolfram-starter.wl
+## floor-harp-starter.wl
 
 Wolfram starter for physics, optimization, visualization, and validation.
 
@@ -255,7 +255,7 @@ data are still open.
 - `bom.csv`, `sourcing.csv`, `cut-list.csv`, `validation.csv` - packet tables.
 - `assembly-manual.md`, `risks.md`, `photo-shotlist.md` - build and review aids.
 - `drawing-brief.md`, `drawings/README.md`, `cad/README.md`,
-  `wolfram-starter.wl`, `wolfram/README.md` - starter technical artifacts.
+  `floor-harp-starter.wl`, `wolfram/README.md` - starter technical artifacts.
 
 ## String-Scale Assumptions
 
