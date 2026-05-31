@@ -24,7 +24,7 @@ data are still open.
 - `bom.csv`, `sourcing.csv`, `cut-list.csv`, `validation.csv` - packet tables.
 - `assembly-manual.md`, `risks.md`, `photo-shotlist.md` - build and review aids.
 - `drawing-brief.md`, `drawings/README.md`, `cad/README.md`,
-  `wolfram-starter.wl`, `wolfram/README.md` - starter technical artifacts.
+  `floor-harp-starter.wl`, `wolfram/README.md` - starter technical artifacts.
 
 ## String-Scale Assumptions
 
