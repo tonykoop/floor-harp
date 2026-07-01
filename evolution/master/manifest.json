@@ -1,0 +1,42 @@
+{
+  "product": "floor-harp",
+  "pipeline": "studiopipeline:evolution-pipeline",
+  "stage": "0-intake",
+  "master_revision": "rev-A (pre-commit intake, 2026-07-01)",
+  "generated": "2026-07-01",
+  "cad_masters": [
+    {
+      "path": "cad/floor-harp.scad",
+      "format": "openscad-source",
+      "sha256": "333fe79e0373f78f2475e7c835e57ef511af26d4659f19e439fcadf52ac18ee9",
+      "authority": "pending_measurement",
+      "lossy": false,
+      "notes": "Parametric master; neck (harmonic) curve derived from the 22 string-schedule speaking lengths. Frame cross-sections are design-table-referenced assumptions; frame not yet analyzed/proof-loaded."
+    },
+    {
+      "path": "floor-harp-design-table.xlsx",
+      "format": "design-table",
+      "sha256": "ba7ea057137af752734724599f35ba732ef77f79d067e83ce3bd201bf418d675",
+      "authority": "fabrication",
+      "lossy": false,
+      "notes": "Workbook authority: soundbox, pillar, neck, string schedule, BOM, and harp size variants."
+    },
+    {
+      "path": "string-schedule.csv",
+      "format": "measurement-template",
+      "sha256": "dc26b83b944535ca9d95865f8dc4f97ef2a94702916fa56ad3c782eb1eb061ad",
+      "authority": "fabrication",
+      "lossy": false,
+      "notes": "22-string C3-C6 first-pass fan; speaking lengths drive the neck curve. Gauge/tension TBD (supplier calculation required)."
+    },
+    {
+      "path": "floor-harp-starter.wl",
+      "format": "wolfram-source",
+      "sha256": "8f57c7f4ff465551adf2c61de2ce47f62e3b54f1b52e1bcc28f6a06e93b17434",
+      "authority": "derived_preview",
+      "lossy": false,
+      "notes": "Wolfram source scaffold; not executed. L2 evidence."
+    }
+  ],
+  "notes": "OpenSCAD source + design table + string schedule are the current masters; no STEP/DXF export yet (SolidWorks/DXF export is Windows-side work, out of scope for this intake pass). String gauges/tensions and total frame load are TBD (supplier calculation + frame proof-load required). Gate A (Alpha workspace compile) not yet run."
+}
