@@ -4,7 +4,7 @@ Engineering documentation and parametric design table for a floor-standing conce
 
 Part of the [tonykoop/instrument-maker](https://github.com/tonykoop/instrument-maker) catalogue.
 
-**Status: L2 V5 build-packet candidate**
+**Status:** L2 V5 build-packet candidate
 
 ## Readiness
 
@@ -25,6 +25,12 @@ data are still open.
 - `assembly-manual.md`, `risks.md`, `photo-shotlist.md` - build and review aids.
 - `drawing-brief.md`, `drawings/README.md`, `cad/README.md`,
   `floor-harp-starter.wl`, `wolfram/README.md` - starter technical artifacts.
+- `cad/floor-harp.scad` - parametric OpenSCAD master; the harmonic (neck) curve
+  is derived from the 22 string-schedule speaking lengths. Authority:
+  pending_measurement; renders clean, not fabrication authority until the frame
+  is analyzed and proof-loaded.
+- `evolution/` - Stage 0 evolution-pipeline intake (master manifest, design
+  intent, revision register). Gate A not yet run.
 
 ## String-Scale Assumptions
 
